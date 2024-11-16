@@ -17,12 +17,13 @@
   ```
 -->
 <div class="min-h-full">
-    <nav class="bg-gray-800">
+    {{-- <nav class="bg-gray-800"> --}}
+        <nav class="bg-teal-800">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="shrink-0">
-                <img class="size-8" src="{{ asset('logos/kuetlogo.png') }}" alt="Your Company">
+                <img class="size-12" src="{{ asset('logos/kuetlogo.png') }}" alt="Your Company">
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
