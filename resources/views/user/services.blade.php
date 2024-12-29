@@ -1,4 +1,4 @@
-<x-navbar>
-    <x-slot:title>Services</x-slot:title>
-    <x-slot:heading>Our Services</x-slot:heading>
-</x-navbar>
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Services'" :heading="'Our services'">
+    <!-- Your main content goes here -->
+</x-mainlayout>

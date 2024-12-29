@@ -1,4 +1,4 @@
-<x-navbar>
-    <x-slot:title>Medical Certificate</x-slot:title>
-    <x-slot:heading>Apply for Medical Certificate</x-slot:heading>
-</x-navbar>
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Medical Certificate'" :heading="'Medical Certificate'">
+    <!-- Your main content goes here -->
+</x-mainlayout>

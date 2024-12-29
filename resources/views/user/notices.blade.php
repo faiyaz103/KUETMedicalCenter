@@ -1,4 +1,4 @@
-<x-navbar>
-    <x-slot:title>Notices</x-slot:title>
-    <x-slot:heading>Notice Board</x-slot:heading>
-</x-navbar>
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Notices'" :heading="'Notices'">
+    <!-- Your main content goes here -->
+</x-mainlayout>

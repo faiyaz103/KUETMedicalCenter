@@ -1,4 +1,4 @@
-<x-navbar>
-    <x-slot:title>Doctors</x-slot:title>
-    <x-slot:heading>Available Doctors</x-slot:heading>
-</x-navbar>
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Doctors'" :heading="'Doctors'">
+    <!-- Your main content goes here -->
+</x-mainlayout>

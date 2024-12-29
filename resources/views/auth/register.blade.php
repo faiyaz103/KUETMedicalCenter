@@ -1,8 +1,6 @@
-<x-navbar :title="'Register'">
-    <x-slot:heading>
-        Register
-    </x-slot:heading>
-
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Register'" :heading="'Register'">
+    <!-- Your main content goes here -->
     <form method="POST" action="/register">
         @csrf
 
@@ -67,4 +65,5 @@
             <x-form-button>Register</x-form-button>
         </div>
     </form>
-</x-navbar>    
+</x-mainlayout>
+ 

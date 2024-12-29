@@ -1,4 +1,4 @@
-<x-navbar>
-    <x-slot:title>Blood Bank</x-slot:title>
-    <x-slot:heading>Blood Bank</x-slot:heading>
-</x-navbar>
+<!-- resources/views/home.blade.php -->
+<x-mainlayout :title="'Blood Bank'" :heading="'Blood Bank'">
+    <!-- Your main content goes here -->
+</x-mainlayout>
