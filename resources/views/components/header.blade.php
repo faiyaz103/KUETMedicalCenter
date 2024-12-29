@@ -1,5 +1,5 @@
 <!-- resources/views/components/header.blade.php -->
-<header class="bg-gray-100">
+<header class="bg-gray-100 relative">
     <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
         <div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <!-- Logo and Title Section -->
@@ -19,5 +19,19 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Authentication Section (Login/Logout) - Positioned at the top-right corner -->
+    <div class="absolute top-0 right-0 mt-4 mr-6 flex gap-6">
+        @guest
+            <a href="/login" class="text-sm text-teal-800 hover:text-black hover:underline">Log In</a>
+            <a href="/register" class="text-sm text-teal-800 hover:text-black hover:underline">Register</a>
+        @endguest
+        @auth
+            <form method="POST" action="/logout">
+                @csrf
+                <button type="submit" class="text-sm text-teal-800 hover:text-black hover:underline">Log Out</button>
+            </form>
+        @endauth
     </div>
 </header>
