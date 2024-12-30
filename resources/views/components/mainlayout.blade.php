@@ -44,6 +44,23 @@
                 mobileMenu.classList.toggle('hidden');
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownButton = document.getElementById('dropdown-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+
+            const mobileDropdownButton = document.querySelector('[aria-controls="mobile-dropdown"]');
+            const mobileDropdownMenu = document.getElementById('mobile-dropdown');
+
+            dropdownButton?.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('hidden');
+            });
+
+            mobileDropdownButton?.addEventListener('click', () => {
+                mobileDropdownMenu.classList.toggle('hidden');
+            });
+        });
+
     </script>
 </body>
 </html>
