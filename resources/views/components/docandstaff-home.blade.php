@@ -1,4 +1,4 @@
-<x-dividerhz text="Doctors & Staff" />
+<x-dividerhz text="Doctors & Staff" logo="{{ asset('images/logos/docandstaff.png') }}" />
 
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
