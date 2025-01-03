@@ -9,7 +9,7 @@
     <title>{{ $title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-full">
+<body class="h-full bg-white">
     <!-- Include Header -->
     <x-header />
 
