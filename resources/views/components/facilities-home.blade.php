@@ -24,7 +24,7 @@
 
             <div class="inline-flex w-full mt-6 sm:w-auto">
                 <a href='/facilities' class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-teal-800 duration-300 bg-white rounded-lg hover:bg-teal-700 hover:text-gray-200 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                    Explore More
+                    See More
                 </a>
             </div>
         </div>

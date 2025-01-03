@@ -5,6 +5,6 @@
     <x-notice-home />
     <x-docandstaff-home />
     <x-facilities-home />
-
+    <x-feedback-and-complaint />
     
 </x-mainlayout>
