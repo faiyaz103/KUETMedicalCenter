@@ -1,5 +1,3 @@
-
-
 <div class="mx-auto mt-10 py-6 w-full bg-teal-800">
     <div class="flex items-center justify-center mb-8">
         <img src="{{asset('images/logos/facilities.png')}}" alt="Logo" class="h-8"> <!-- Adjust logo size as needed -->
