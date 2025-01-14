@@ -59,6 +59,22 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownButton = document.getElementById('service-dropdown-button');
+            const dropdownMenu = document.getElementById('service-dropdown-menu');
+
+            const mobileDropdownButton = document.querySelector('[aria-controls="service-mobile-dropdown"]');
+            const mobileDropdownMenu = document.getElementById('service-mobile-dropdown');
+
+            dropdownButton?.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('hidden');
+            });
+
+            mobileDropdownButton?.addEventListener('click', () => {
+                mobileDropdownMenu.classList.toggle('hidden');
+            });
+        });
+
     </script>
 </body>
 </html>

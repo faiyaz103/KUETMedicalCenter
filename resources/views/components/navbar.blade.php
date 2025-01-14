@@ -19,7 +19,19 @@
                             </div>
                         </div>
                         <x-navlink href="/facilities" :active="request()->is('facilities')">Facilities</x-navlink>
-                        <x-navlink href="/services" :active="request()->is('services')">Services</x-navlink>
+                        <div class="relative inline-block text-left">
+                            <button type="button" class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-teal-800 px-3 py-2 text-sm font-medium text-white  hover:text-opacity-70"
+                                id="service-dropdown-button" aria-expanded="false" aria-haspopup="true">
+                                Services
+                                <svg class="size-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="absolute hidden mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" id="service-dropdown-menu">
+                                <a href="/doctors-schedule" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Doctors Schedule</a>
+                                <a href="/services" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Other Services</a>
+                            </div>
+                        </div>
                         <x-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-navlink>
                         <x-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-navlink>
                         <x-navlink href="/contact" :active="request()->is('contact')">Contact</x-navlink>
@@ -63,7 +75,23 @@
                 </div>
             </div>            
             <x-mobile-navlink href="/facilities" :active="request()->is('facilities')">Facilities</x-mobile-navlink>
-            <x-mobile-navlink href="/services" :active="request()->is('services')">Services</x-mobile-navlink>
+            {{-- <x-mobile-navlink href="/services" :active="request()->is('services')">Services</x-mobile-navlink> --}}
+            <div>
+                <button type="button" 
+                    class="flex w-full items-center justify-between rounded-md bg-teal-800 px-3 py-2 text-base font-medium text-white hover:text-opacity-70" 
+                    aria-expanded="false" 
+                    aria-controls="service-mobile-dropdown">
+                    <span>Services</span>
+                    <!-- Dropdown Icon -->
+                    <svg class="size-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="hidden space-y-1 pl-4" id="service-mobile-dropdown">
+                    <a href="/doctors-schedule" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('doctors')">Doctors Schedule</a>
+                    <a href="/services" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('staff')">Other Services</a>
+                </div>
+            </div>   
             <x-mobile-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-mobile-navlink>
             <x-mobile-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-mobile-navlink>
             <x-mobile-navlink href="/contact" :active="request()->is('contact')">Contact</x-mobile-navlink>
