@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\StaffController;
 
 Route::get('/', function () {
     return view('user.home');
@@ -17,6 +18,8 @@ Route::get('/services', function () {
 //     return view('user.doctors');
 // });
 Route::get('/doctors', [DoctorController::class, 'index']);
+
+Route::get('/staff', [StaffController::class, 'index']);
 
 Route::get('/bloodbank', function () {
     return view('user.bloodbank');
