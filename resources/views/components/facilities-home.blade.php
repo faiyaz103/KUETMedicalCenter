@@ -15,9 +15,8 @@
             </h2>
 
             <p class="mt-4 text-gray-200">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-                mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+                    KUET Medical Center has various units and tests available to meet the healthcare needs of our patients. 
+                    We aim to provide reliable services and care through our specialized departments and advanced diagnostic tests.     
             </p>
 
             <div class="inline-flex w-full mt-6 sm:w-auto">

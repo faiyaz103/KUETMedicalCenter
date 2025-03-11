@@ -3,7 +3,7 @@
 
     <x-carousel :images="['c1.jpg', 'c2.jpg', 'c3.jpg', 'c4.jpg']" />
     <x-notice-home />
-    <x-docandstaff-home />
+    <x-services-home />
     <x-facilities-home />
     <x-feedback-and-complaint />
     

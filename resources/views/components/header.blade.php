@@ -1,6 +1,4 @@
-<!-- resources/views/components/header.blade.php -->
 <header class="bg-gray-100 relative">
-    <!-- Authentication Section (Login/Logout) - Positioned above the title for mobile -->
     <div class="absolute top-0 right-0 mt-2 mb-2 mr-4 sm:mr-6 flex gap-4 md:gap-6 z-10">
         @guest
             <a href="/login" class="text-sm text-teal-800 hover:text-black hover:underline">Log In</a>
@@ -16,18 +14,33 @@
 
     <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
         <div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-            <!-- Logo and Title Section -->
             <div class="flex items-center gap-4 mt-16 sm:mt-0">
-                <img 
+                <a href="/">
+                    <img 
                     src="{{ asset('images/logos/kuetlogo.png') }}" 
                     alt="KUET Logo" 
                     class="h-12 w-12 object-contain" 
                 />
+                </a>
                 <div>
+                    <div class="flex flex-col sm:flex-row sm:items-center">
+                        <div class="flex items-center mb-1 sm:mb-0">
+                            <img src="{{ asset('images/logos/phone.png') }}" alt="Phone Logo" class="h-3 w-3 mr-1" />
+                            <p class="inline text-sm text-red-700 mr-3"> 01714087203, 02477732986 (Ext. 8930)</p>
+                        </div>
+                        <div class="flex items-center mb-1 sm:mb-0 sm:ml-2">
+                            <img src="{{ asset('images/logos/email.png') }}" alt="Email Logo" class="h-3 w-3 mr-1" />
+                            <p class="inline text-sm text-red-700 mr-3">cmo@kuet.ac.bd</p>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="{{ asset('images/logos/ambulance.png') }}" alt="Ambulance Logo" class="h-4 w-4 mr-1" />
+                            <p class="inline text-sm text-red-700">01234567891</p>
+                        </div>
+                    </div>
                     <h1 class="text-2xl font-bold text-teal-800 sm:text-3xl">
                         KHULNA UNIVERSITY OF ENGINEERING & TECHNOLOGY
                     </h1>
-                    <p class="mt-1.5 text-md text-teal-700">
+                    <p class="mt-1.5 text-lg font-semibold text-teal-700">
                         Central Medical Center
                     </p>
                 </div>
