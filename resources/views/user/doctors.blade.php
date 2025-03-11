@@ -1,7 +1,7 @@
 <!-- resources/views/home.blade.php -->
 <x-mainlayout :title="'Doctors - KUET Medical Center'" :heading="'Doctors'">
     <!-- Your main content goes here -->
-    <section class="container px-4 mx-auto">
+    <section class="container px-4 py-5 mx-auto">
         <div class="flex flex-col">
             <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -42,7 +42,7 @@
 
                                     <td class="px-4 py-4 text-sm text-gray-800 whitespace-nowrap">
                                         <div class="flex items-center gap-x-2">
-                                            <img class="object-cover w-8 h-8 rounded-full" src="{{ asset($doctor->image) }}" alt="">
+                                            <img class="object-cover w-12 h-12 rounded-full" src="{{ asset($doctor->image) }}" alt="">
                                             <div>
                                                 <h2 class="text-sm font-medium text-gray-800">{{ $doctor->name }}</h2>
                                             </div>
