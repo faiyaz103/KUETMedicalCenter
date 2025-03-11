@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\StaffController;
 
@@ -20,6 +21,8 @@ Route::get('/doctors', [DoctorController::class, 'index']);
 Route::get('/facilities', [FacilitiesController::class, 'index']);
 
 Route::get('/staff', [StaffController::class, 'index']);
+
+Route::get('//doctors-schedule', [DoctorScheduleController::class, 'index']);
 
 Route::get('/bloodbank', function () {
     return view('user.bloodbank');
