@@ -32,10 +32,6 @@
                             <img src="{{ asset('images/logos/email.png') }}" alt="Email Logo" class="h-3 w-3 mr-1" />
                             <p class="inline text-sm text-red-700 mr-3">cmo@kuet.ac.bd</p>
                         </div>
-                        <div class="flex items-center">
-                            <img src="{{ asset('images/logos/ambulance.png') }}" alt="Ambulance Logo" class="h-4 w-4 mr-1" />
-                            <p class="inline text-sm text-red-700">01234567891</p>
-                        </div>
                     </div>
                     <h1 class="text-2xl font-bold text-teal-800 sm:text-3xl">
                         KHULNA UNIVERSITY OF ENGINEERING & TECHNOLOGY
