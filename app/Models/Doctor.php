@@ -14,4 +14,9 @@ class Doctor extends Model
     protected $fillable = [
         'image', 'name', 'designation', 'specialization', 'contact', 'email'
     ];
+
+    public function schedule()
+    {
+        return $this->hasOne(DoctorSchedule::class, 'doctor_id');
+    }
 }
