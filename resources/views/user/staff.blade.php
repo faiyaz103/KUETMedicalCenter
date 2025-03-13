@@ -31,7 +31,7 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
+                            <tbody class="bg-white divide-y divide-teal-800">
                                 @foreach ($staff as $index => $staff)
                                 <tr>
                                     <td class="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $index + 1 }}</td>
