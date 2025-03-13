@@ -16,7 +16,7 @@ class NoticeController extends Controller
         //
         $notices = Notice::orderBy('created_at', 'desc')->get();
 
-        return view('admin.notices.index', compact('notices'));
+        return view('user.notices', compact('notices'));
     }
 
     /**

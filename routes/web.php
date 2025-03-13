@@ -10,24 +10,38 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ServiceController;
 
+// ************************USER************************
+
+// ------------------Home------------------
 Route::get('/', function () {
     return view('user.home');
 });
 
-Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
-
+// -----------------Doctors----------------
 Route::get('/doctors', [DoctorController::class, 'index']);
 
-Route::get('/facilities', [FacilitiesController::class, 'index']);
-
+// -----------------Staff------------------
 Route::get('/staff', [StaffController::class, 'index']);
 
+// -----------------Facilities--------------
+Route::get('/facilities', [FacilitiesController::class, 'index']);
+
+// -----------------Doctor Visit------------
 Route::get('/doctors-schedule', [DoctorScheduleController::class, 'index']);
 
-// -------------------Notices----------------------
+// ---------------Other Services-------------
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 
-// Route to show all notices (index)
+// --------------Notice Board------------------
 Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index');
+
+
+// ************************USER************************
+
+
+
+
+
 
 // Route to show the form to create a new notice
 Route::get('/notices/create', [NoticeController::class, 'create'])->name('notices.create');

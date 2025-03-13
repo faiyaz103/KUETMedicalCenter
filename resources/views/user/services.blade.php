@@ -1,5 +1,5 @@
 <!-- resources/views/home.blade.php -->
-<x-mainlayout :title="'Services - KUET Medical Center'" :heading="'Our services'">
+<x-mainlayout :title="'Services - KUET Medical Center'" :heading="'Our Services'">
     <!-- Your main content goes here -->
     
 <section>
