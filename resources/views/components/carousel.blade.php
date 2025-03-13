@@ -1,5 +1,5 @@
-<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <div id="carousel-example" class="relative w-full">
+<div class="mx-auto w-full px-4 py-6 sm:px-6 lg:px-8">
+    <div id="carousel-example" class="relative max-w-7xl mx-auto">
         <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg sm:h-64 xl:h-80 2xl:h-96" id="carousel-inner">
             @foreach ($images as $index => $image)
