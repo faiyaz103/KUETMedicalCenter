@@ -7,6 +7,7 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\NoticeController;
 
 Route::get('/', function () {
     return view('user.home');
@@ -22,7 +23,32 @@ Route::get('/facilities', [FacilitiesController::class, 'index']);
 
 Route::get('/staff', [StaffController::class, 'index']);
 
-Route::get('//doctors-schedule', [DoctorScheduleController::class, 'index']);
+Route::get('/doctors-schedule', [DoctorScheduleController::class, 'index']);
+
+// -------------------Notices----------------------
+
+// Route to show all notices (index)
+Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index');
+
+// Route to show the form to create a new notice
+Route::get('/notices/create', [NoticeController::class, 'create'])->name('notices.create');
+
+// Route to store the newly created notice
+Route::post('/notices', [NoticeController::class, 'store'])->name('notices.store');
+
+// Route to show the edit form for an existing notice
+Route::get('/notices/{id}/edit', [NoticeController::class, 'edit'])->name('notices.edit');
+
+// Route to update the existing notice
+Route::put('/notices/{id}', [NoticeController::class, 'update'])->name('notices.update');
+
+// Route to delete a notice
+Route::delete('/notices/{id}', [NoticeController::class, 'destroy'])->name('notices.destroy');
+
+// Route to view the individual notice (open PDF)
+Route::get('/notices/{id}', [NoticeController::class, 'show'])->name('notices.show');
+// --------------------------------------------------
+
 
 Route::get('/bloodbank', function () {
     return view('user.bloodbank');
@@ -32,9 +58,9 @@ Route::get('/medcertificate', function () {
     return view('user.medcertificate');
 });
 
-Route::get('/notices', function () {
-    return view('user.notices');
-});
+// Route::get('/notices', function () {
+//     return view('user.notices');
+// });
 
 //Auth
 
