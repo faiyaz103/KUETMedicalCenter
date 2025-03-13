@@ -12,7 +12,7 @@
         <div class="peer-checked:block hidden overflow-x-auto py-2">
             <div class="border border-gray-200 rounded-lg">
                 <table class="min-w-full divide-y divide-gray-200 text-sm">
-                    <tbody class="bg-white divide-y divide-gray-200">
+                    <tbody class="bg-white divide-y divide-teal-800">
                         @foreach ($units as $index => $unit)
                         <tr>
                             <td class="px-2 py-2 text-gray-500">{{ $index + 1 }}</td>

@@ -18,7 +18,7 @@
                             <th class="px-2 py-2 text-left text-gray-800">Fees (BDT)</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
+                    <tbody class="bg-white divide-y divide-teal-800">
                         @foreach ($tests as $index => $test)
                         <tr>
                             <td class="px-2 py-2 text-gray-500">{{ $index + 1 }}</td>

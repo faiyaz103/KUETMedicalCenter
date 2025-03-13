@@ -28,7 +28,7 @@
                                 </svg>
                             </button>
                             <div class="absolute hidden mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" id="service-dropdown-menu">
-                                <a href="/doctors-schedule" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Doctors Schedule</a>
+                                <a href="/doctors-schedule" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Doctor Visit</a>
                                 <a href="/services" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Other Services</a>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                     </svg>
                 </button>
                 <div class="hidden space-y-1 pl-4" id="service-mobile-dropdown">
-                    <a href="/doctors-schedule" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('doctors')">Doctors Schedule</a>
+                    <a href="/doctors-schedule" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('doctors')">Doctor Visit</a>
                     <a href="/services" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('staff')">Other Services</a>
                 </div>
             </div>   

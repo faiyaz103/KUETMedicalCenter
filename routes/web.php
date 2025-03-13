@@ -8,14 +8,13 @@ use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\ServiceController;
 
 Route::get('/', function () {
     return view('user.home');
 });
 
-Route::get('/services', function () {
-    return view('user.services');
-});
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 
 Route::get('/doctors', [DoctorController::class, 'index']);
 

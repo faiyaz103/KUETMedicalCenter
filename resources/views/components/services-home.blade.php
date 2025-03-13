@@ -8,7 +8,7 @@
                     <img class="h-full w-full object-cover rounded-lg shadow-lg" src="{{asset('images/doctorsimage.jpg')}}" alt="Medical Team Meeting">
                     <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="absolute inset-0 flex items-center justify-center text-white font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                        Doctors Schedule
+                        Doctor Visit
                     </div>
                 </a>
             </div>
