@@ -34,7 +34,7 @@
                         </div>
                         <x-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-navlink>
                         <x-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-navlink>
-                        <x-navlink href="/contact" :active="request()->is('contact')">Contact</x-navlink>
+                        <x-navlink href="/contact" :active="request()->is('contact')">Contact Us</x-navlink>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
             </div>   
             <x-mobile-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-mobile-navlink>
             <x-mobile-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-mobile-navlink>
-            <x-mobile-navlink href="/contact" :active="request()->is('contact')">Contact</x-mobile-navlink>
+            <x-mobile-navlink href="/contact" :active="request()->is('contact')">Contact Us</x-mobile-navlink>
         </div>
     </div>
 </nav>

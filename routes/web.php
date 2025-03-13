@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ServiceController;
+use App\Models\Contact;
 
 // ************************USER************************
 
@@ -34,6 +36,9 @@ Route::get('/services', [ServiceController::class, 'index'])->name('services.ind
 
 // --------------Notice Board------------------
 Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index');
+
+// -------------------Contact-------------------
+Route::get('/contact', [ContactController::class, 'index']);
 
 
 // ************************USER************************

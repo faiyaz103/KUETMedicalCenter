@@ -5,6 +5,6 @@
     <x-latest-notice />
     <x-services-home />
     <x-facilities-home />
-    <x-feedback-and-complaint />
+    <x-reach />
     
 </x-mainlayout>

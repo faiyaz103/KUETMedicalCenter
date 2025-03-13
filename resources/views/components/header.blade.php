@@ -23,16 +23,7 @@
                 />
                 </a>
                 <div>
-                    <div class="flex flex-col sm:flex-row sm:items-center">
-                        <div class="flex items-center mb-1 sm:mb-0">
-                            <img src="{{ asset('images/logos/phone.png') }}" alt="Phone Logo" class="h-3 w-3 mr-1" />
-                            <p class="inline text-sm text-red-700 mr-3"> 01714087203, 02477732986 (Ext. 8930)</p>
-                        </div>
-                        <div class="flex items-center mb-1 sm:mb-0 sm:ml-2">
-                            <img src="{{ asset('images/logos/email.png') }}" alt="Email Logo" class="h-3 w-3 mr-1" />
-                            <p class="inline text-sm text-red-700 mr-3">cmo@kuet.ac.bd</p>
-                        </div>
-                    </div>
+                    <x-header-contact/>
                     <h1 class="text-2xl font-bold text-teal-800 sm:text-3xl">
                         KHULNA UNIVERSITY OF ENGINEERING & TECHNOLOGY
                     </h1>
