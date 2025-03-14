@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Feedback;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FeedbackController extends Controller
 {
@@ -31,14 +32,12 @@ class FeedbackController extends Controller
         //
 
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email',
             'message' => 'required|string'
         ]);
 
         Feedback::create([
-            'name' => $request->name,
-            'email' => $request->email,
+            'name' => Auth::user()->name,
+            'email' => Auth::user()->email,
             'message' => $request->message,
         ]);
 

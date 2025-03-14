@@ -3,6 +3,17 @@
 
     <form action="{{ route('feedback.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
+
+        @auth
+        <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <input type="text" id="name" name="name" value="{{ auth()->user()->name }}" class="w-full bg-white rounded border border-teal-800 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" readonly>
+        </div>
+        <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <input type="email" id="email" name="email" value="{{ auth()->user()->email }}" class="w-full bg-white rounded border border-teal-800 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" readonly>
+        </div>
+        @else 
         <div class="relative mb-4">
             <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
             <input type="text" id="name" name="name" class="w-full bg-white rounded border border-teal-800 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
@@ -11,6 +22,8 @@
             <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
             <input type="email" id="email" name="email" class="w-full bg-white rounded border border-teal-800 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
         </div>
+        @endauth
+
         <div class="relative mb-4">
             <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
             <textarea id="message" name="message" class="w-full bg-white rounded border border-teal-800 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
