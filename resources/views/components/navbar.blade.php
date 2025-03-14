@@ -4,7 +4,7 @@
             <div class="flex items-center">
                 <div class="hidden md:block">
                     <div class="flex items-baseline space-x-4">
-                        <x-navlink href="/" :active="request()->is('/')">Home</x-navlink>
+                        <x-navlink href="/" :active="request()->is('/') || request()->is('home')">Home</x-navlink>
                         <div class="relative inline-block text-left">
                             <button type="button" class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-teal-800 px-3 py-2 text-sm font-medium text-white  hover:text-opacity-70"
                                 id="dropdown-button" aria-expanded="false" aria-haspopup="true">
