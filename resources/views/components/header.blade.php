@@ -1,15 +1,13 @@
 <header class="bg-gray-100 relative">
     <div class="absolute top-0 right-0 mt-2 mb-2 mr-4 sm:mr-6 flex gap-4 md:gap-6 z-10">
+        
         @guest
-            <a href="/login" class="text-sm text-teal-800 hover:text-black hover:underline">Log In</a>
-            <a href="/register" class="text-sm text-teal-800 hover:text-black hover:underline">Register</a>
+        <a href="{{ route('login') }}" class="text-red-600 underline px-4 py-2">Login</a>
+        <a href="{{ route('register') }}" class="text-teal-800 underline px-4 py-2 rounded">Register</a>
         @endguest
-        @auth
-            <form method="POST" action="/logout">
-                @csrf
-                <button type="submit" class="text-sm text-teal-800 hover:text-black hover:underline">Log Out</button>
-            </form>
-        @endauth
+        
+            
+            
     </div>
 
     <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">

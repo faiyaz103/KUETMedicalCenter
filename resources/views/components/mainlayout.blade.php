@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>{{ $title }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css'])
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 </head>
 <body class="bg-white">
     <!-- Include Header -->

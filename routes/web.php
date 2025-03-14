@@ -2,14 +2,13 @@
 
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisteredUserController;
-use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\FacilitiesController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Models\Contact;
 
@@ -42,7 +41,7 @@ Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index'
 Route::get('/contact', [ContactController::class, 'index']);
 
 // ------------------Feedback-------------------
-Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['auth', 'verified'])->name('feedback.store');
 
 // ************************USER************************
 
@@ -75,19 +74,15 @@ Route::get('/bloodbank', function () {
     return view('user.bloodbank');
 });
 
-Route::get('/medcertificate', function () {
-    return view('user.medcertificate');
+
+Route::get('/home', function () {
+    return view('user.home');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::get('/notices', function () {
-//     return view('user.notices');
-// });
-
-//Auth
-
-Route::get('/register',[RegisteredUserController::class, 'create']);
-Route::post('/register',[RegisteredUserController::class, 'store']);
-
-Route::get('/login',[SessionController::class, 'create']);
-Route::post('/login',[SessionController::class, 'store']);
-Route::post('/logout',[SessionController::class, 'destroy']);
+require __DIR__.'/auth.php';

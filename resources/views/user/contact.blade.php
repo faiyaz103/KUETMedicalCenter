@@ -2,6 +2,7 @@
 
     <div class="flex justify-center items-center h-[380px]">
         <div class="overflow-x-auto pt-12 h-[350px] w-full max-w-4xl">
+            @if($contact)
             <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
     
                 <tbody class="divide-y divide-teal-800">
@@ -30,6 +31,9 @@
                     
                 </tbody>
             </table>
+            @else 
+            <h1>Information Not Available</h1>
+            @endif
         </div>
     </div>
     

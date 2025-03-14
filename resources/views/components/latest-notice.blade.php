@@ -8,7 +8,7 @@
         </a>
       @else
         <span class="font-medium text-black hover:text-white transition duration-200">
-          >No notices available
+            No notices available
         </span>
       @endif
     </div>

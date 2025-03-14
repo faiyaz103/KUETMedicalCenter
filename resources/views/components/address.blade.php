@@ -7,15 +7,15 @@
     <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div class="lg:w-1/2 px-6">
             <h2 class="title-font font-semibold text-teal-800 tracking-widest text-xs">ADDRESS</h2>
-            <p class="mt-1">{{$contact->organization}}</p>
-            <p class="mt-1">{{$contact->location}}</p>
+            <p class="mt-1">{{$contact->organization ?? 'N/A'}}</p>
+            <p class="mt-1">{{$contact->location ?? 'N/A'}}</p>
         </div>
         <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
             <h2 class="title-font font-semibold text-teal-800 tracking-widest text-xs">EMAIL</h2>
-            <a class="text-red-500 leading-relaxed">{{$contact->email}}</a>
+            <a class="text-red-500 leading-relaxed">{{$contact->email ?? 'N/A'}}</a>
             <h2 class="title-font font-semibold text-teal-800 tracking-widest text-xs mt-4">PHONE</h2>
-            <p class="leading-relaxed">{{$contact->telephone}}</p>
-            <p class="leading-relaxed">{{$contact->mobile}}</p>
+            <p class="leading-relaxed">{{$contact->telephone ?? 'N/A'}}</p>
+            <p class="leading-relaxed">{{$contact->mobile ?? 'N/A'}}</p>
         </div>
     </div>
 </div>
