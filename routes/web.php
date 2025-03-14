@@ -78,6 +78,10 @@ Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['aut
 
 // @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware(['auth', 'verified', 'admin'])->name('admin.dashboard');
+
 // _______________________Notice_________________________
 
 // Route to show the form to create a new notice
