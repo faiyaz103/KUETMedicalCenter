@@ -78,29 +78,37 @@ Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['aut
 
 // @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+// _____________________Home____________________________
+
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified', 'admin'])->name('admin.dashboard');
 
 // _______________________Notice_________________________
 
+Route::middleware(['auth', 'verified', 'admin'])->group( function(){
+    // Show notice list
+Route::get('/admin/notices', [NoticeController::class, 'list'])->name('notices.list');
+
 // Route to show the form to create a new notice
-Route::get('/notices/create', [NoticeController::class, 'create'])->name('notices.create');
+Route::get('/admin/notices/create', [NoticeController::class, 'create'])->name('notices.create');
 
 // Route to store the newly created notice
-Route::post('/notices', [NoticeController::class, 'store'])->name('notices.store');
+Route::post('/admin/notices', [NoticeController::class, 'store'])->name('notices.store');
 
 // Route to show the edit form for an existing notice
-Route::get('/notices/{id}/edit', [NoticeController::class, 'edit'])->name('notices.edit');
+Route::get('/admin/notices/{id}/edit', [NoticeController::class, 'edit'])->name('notices.edit');
 
 // Route to update the existing notice
-Route::put('/notices/{id}', [NoticeController::class, 'update'])->name('notices.update');
+Route::put('/admin/notices/{id}', [NoticeController::class, 'update'])->name('notices.update');
 
 // Route to delete a notice
-Route::delete('/notices/{id}', [NoticeController::class, 'destroy'])->name('notices.destroy');
+Route::delete('/admin/notices/{id}', [NoticeController::class, 'destroy'])->name('notices.destroy');
 
 // Route to view the individual notice (open PDF)
-Route::get('/notices/{id}', [NoticeController::class, 'show'])->name('notices.show');
+Route::get('/admin/notices/{id}', [NoticeController::class, 'show'])->name('notices.show');
+});
+
 
 // @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

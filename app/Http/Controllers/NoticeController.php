@@ -18,6 +18,13 @@ class NoticeController extends Controller
 
         return view('user.notices', compact('notices'));
     }
+    public function list()
+    {
+        //
+        $notices = Notice::orderBy('created_at', 'desc')->get();
+
+        return view('admin.notices.index', compact('notices'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -48,7 +55,7 @@ class NoticeController extends Controller
             'file_path' => $filePath,
         ]);
 
-        return redirect()->route('notices.index')->with('success', 'Notice uploaded successfully!');
+        return redirect()->route('notices.list')->with('success', 'Notice uploaded successfully!');
     }
 
     /**
@@ -100,7 +107,7 @@ class NoticeController extends Controller
         // Save updated notice
         $notice->save();
     
-        return redirect()->route('notices.index')->with('success', 'Notice updated successfully!');
+        return redirect()->route('notices.list')->with('success', 'Notice updated successfully!');
     }
 
     /**
@@ -117,6 +124,6 @@ class NoticeController extends Controller
         // Delete record from database
         $notice->delete();
 
-        return redirect()->route('notices.index')->with('success', 'Notice deleted successfully!');
+        return redirect()->route('notices.list')->with('success', 'Notice deleted successfully!');
     }
 }

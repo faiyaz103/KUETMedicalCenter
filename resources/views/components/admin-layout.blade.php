@@ -68,7 +68,7 @@
                     </x-admin-navlink>
 
                     <!-- Notices -->
-                    <x-admin-navlink href="/admin/notices" :active="request()->is('admin/notices')">
+                    <x-admin-navlink href="{{ route('notices.list') }}" :active="request()->is('admin/notices') || request()->is('admin/notices*')">
                         <img src="{{ asset('images/admin/notices.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Notices
                     </x-admin-navlink>
@@ -85,7 +85,7 @@
                 </h1> 
             </header>
             
-            
+            {{ $slot }}
             
         </main>
 
