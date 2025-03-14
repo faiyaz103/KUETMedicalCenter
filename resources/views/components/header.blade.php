@@ -3,7 +3,6 @@
         
         @guest
         <a href="{{ route('login') }}" class="text-red-600 underline px-4 py-2">Login</a>
-        <a href="{{ route('register') }}" class="text-teal-800 underline px-4 py-2 rounded">Register</a>
         @endguest
         
             
