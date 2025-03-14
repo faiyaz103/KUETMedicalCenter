@@ -7,6 +7,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\DoctorScheduleController;
 use App\Http\Controllers\FacilitiesController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ServiceController;
@@ -40,6 +41,8 @@ Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index'
 // -------------------Contact-------------------
 Route::get('/contact', [ContactController::class, 'index']);
 
+// ------------------Feedback-------------------
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
 
 // ************************USER************************
 
