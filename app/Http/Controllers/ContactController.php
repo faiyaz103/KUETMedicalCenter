@@ -17,6 +17,13 @@ class ContactController extends Controller
 
         return view('user.contact', compact('contact'));
     }
+    public function list()
+    {
+        //
+        $contact = Contact::first();
+
+        return view('admin.dashboard', compact('contact'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -29,9 +36,52 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function storeOrUpdate(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'organization' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'telephone' => 'required|string|max:255',
+            'mobile' => 'required|string|max:255',
+            'email' => [
+            'required',
+            'string',
+            'email',
+            'max:255',
+            function ($attribute, $value, $fail) {
+                if (!preg_match('/@kuet\.ac\.bd$/', $value)) {
+                    $fail('Academic email required');
+                }
+            }]     
+        ]);
+
+        $contact = Contact::first();
+
+        if($contact){
+            $contact->update([
+                'title' => $request->title,
+                'organization' => $request->organization,
+                'location' => $request->location,
+                'telephone' => $request->telephone,
+                'mobile' => $request->mobile,
+                'email' => $request->email,
+            ]);
+        }
+        else{
+            Contact::create([
+                'title' => $request->title,
+                'organization' => $request->organization,
+                'location' => $request->location,
+                'telephone' => $request->telephone,
+                'mobile' => $request->mobile,
+                'email' => $request->email,
+            ]);
+        }
+
+        
+
+        return redirect()->route('admin.dashboard')->with('success', 'Information uploaded successfully!');
     }
 
     /**
