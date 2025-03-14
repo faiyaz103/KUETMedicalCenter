@@ -12,7 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Models\Contact;
 
-// ************************USER************************
+// ************************ USER ************************
 
 // ------------------Home------------------
 Route::get('/', function () {
@@ -40,15 +40,43 @@ Route::get('/notices', [NoticeController::class, 'index'])->name('notices.index'
 // -------------------Contact-------------------
 Route::get('/contact', [ContactController::class, 'index']);
 
+// ************************ USER ************************
+
+
+
+
+// ################ AUTHENTICATED USER ###################
+
+//-------------------Home---------------------
+Route::get('/home', function () {
+    return view('user.home');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+// -----------------Profile--------------------
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// ################ AUTHENTICATED USER ###################
+
+
+
+
+// $$$$$$$$$$$$$$$$$$$$$$ STUDENT $$$$$$$$$$$$$$$$$$$$$$$$$
+
 // ------------------Feedback-------------------
-Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['auth', 'verified'])->name('feedback.store');
+Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['auth', 'verified', 'student'])->name('feedback.store');
 
-// ************************USER************************
-
-
+// $$$$$$$$$$$$$$$$$$$$$$ STUDENT $$$$$$$$$$$$$$$$$$$$$$$$$
 
 
 
+
+// @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+// _______________________Notice_________________________
 
 // Route to show the form to create a new notice
 Route::get('/notices/create', [NoticeController::class, 'create'])->name('notices.create');
@@ -67,22 +95,11 @@ Route::delete('/notices/{id}', [NoticeController::class, 'destroy'])->name('noti
 
 // Route to view the individual notice (open PDF)
 Route::get('/notices/{id}', [NoticeController::class, 'show'])->name('notices.show');
-// --------------------------------------------------
+
+// @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-Route::get('/bloodbank', function () {
-    return view('user.bloodbank');
-});
 
 
-Route::get('/home', function () {
-    return view('user.home');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 require __DIR__.'/auth.php';
