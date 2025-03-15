@@ -2,63 +2,79 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tests;
 use Illuminate\Http\Request;
 
 class TestsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function list()
     {
         //
+        $tests=Tests::all();
+
+        return view('admin.tests.index', compact('tests'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         //
+
+        return view('admin.tests.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'fees' => 'required|integer|min:0'
+        ]);
+    
+        Tests::create([
+            'name' => $request->name,
+            'fees' => $request->fees
+        ]);
+
+        return redirect()->route('tests.list')->with('success', 'uploaded successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
+        $test = Tests::findOrFail($id);
+        return view('admin.tests.edit', compact('test'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'fees' => 'required|integer|min:0'
+        ]);
+
+        $test = Tests::findOrFail($id);
+
+        $test->update([
+            'name' => $request->name,
+            'fees' => $request->fees
+        ]);
+
+        return redirect()->route('tests.list')->with('success', 'Updated successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         //
+        $test = Tests::findOrFail($id);
+
+        // Delete record from database
+        $test->delete();
+
+        return redirect()->route('tests.list')->with('success', 'Deleted successfully!');
     }
 }

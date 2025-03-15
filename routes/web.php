@@ -10,6 +10,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestsController;
 use App\Http\Controllers\UnitsController;
 use App\Models\Contact;
 
@@ -131,6 +132,21 @@ Route::get('/admin/units/{id}/edit', [UnitsController::class, 'edit'])->name('un
 Route::put('/admin/units/{id}', [UnitsController::class, 'update'])->name('units.update');
 // Route to delete one
 Route::delete('/admin/units/{id}', [UnitsController::class, 'destroy'])->name('units.destroy');
+
+
+// _______________________Tests_________________________
+// Show list
+Route::get('/admin/tests', [TestsController::class, 'list'])->name('tests.list');
+// Route to show the form to create a new one
+Route::get('/admin/tests/create', [TestsController::class, 'create'])->name('tests.create');
+// Route to store the newly created one
+Route::post('/admin/tests', [TestsController::class, 'store'])->name('tests.store');
+// Route to show the edit form for an existing one
+Route::get('/admin/tests/{id}/edit', [TestsController::class, 'edit'])->name('tests.edit');
+// Route to update the existing one
+Route::put('/admin/tests/{id}', [TestsController::class, 'update'])->name('tests.update');
+// Route to delete one
+Route::delete('/admin/tests/{id}', [TestsController::class, 'destroy'])->name('tests.destroy');
 
 
 

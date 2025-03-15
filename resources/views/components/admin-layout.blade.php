@@ -61,7 +61,7 @@
                     </x-admin-navlink>
 
                     <!-- Tests -->
-                    <x-admin-navlink href="/admin/tests" :active="request()->is('admin/tests')">
+                    <x-admin-navlink href="/admin/tests" :active="request()->is('admin/tests*')">
                         <img src="{{ asset('images/admin/tests.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Tests
                     </x-admin-navlink>
