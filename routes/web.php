@@ -102,6 +102,21 @@ Route::put('/admin/doctors/{id}', [DoctorController::class, 'update'])->name('do
 Route::delete('/admin/doctors/{id}', [DoctorController::class, 'destroy'])->name('doctors.destroy');
 
 
+// _______________________Staff_________________________
+// Show list
+Route::get('/admin/staff', [StaffController::class, 'list'])->name('staff.list');
+// Route to show the form to create a new notice
+Route::get('/admin/staff/create', [StaffController::class, 'create'])->name('staff.create');
+// Route to store the newly created one
+Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
+// Route to show the edit form for an existing one
+Route::get('/admin/staff/{id}/edit', [StaffController::class, 'edit'])->name('staff.edit');
+// Route to update the existing one
+Route::put('/admin/staff/{id}', [StaffController::class, 'update'])->name('staff.update');
+// Route to delete one
+Route::delete('/admin/staff/{id}', [StaffController::class, 'destroy'])->name('staff.destroy');
+
+
 // _______________________Notice_________________________
 // Show notice list
 Route::get('/admin/notices', [NoticeController::class, 'list'])->name('notices.list');

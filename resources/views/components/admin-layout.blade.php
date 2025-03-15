@@ -49,7 +49,7 @@
                     </x-admin-navlink>
 
                     <!-- Staff List -->
-                    <x-admin-navlink href="/admin/staff" :active="request()->is('admin/staff')">
+                    <x-admin-navlink href="/admin/staff" :active="request()->is('admin/staff*')">
                         <img src="{{ asset('images/admin/staff.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Staff
                     </x-admin-navlink>
