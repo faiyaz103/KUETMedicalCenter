@@ -30,14 +30,14 @@
                 <!-- Main Navigation -->
                 <div class="space-y-4">
                     
-                    <!-- Doctors List -->
+                    <!-- Basic Info -->
                     <x-admin-navlink href="/admin/dashboard" :active="request()->is('admin/dashboard*')">
                         <img src="{{ asset('images/admin/home.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Home
                     </x-admin-navlink>
 
                     <!-- Doctors List -->
-                    <x-admin-navlink href="/admin/doctors" :active="request()->is('admin/doctors')">
+                    <x-admin-navlink href="/admin/doctors" :active="request()->is('admin/doctors*')">
                         <img src="{{ asset('images/admin/doctor.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Doctors
                     </x-admin-navlink>

@@ -42,7 +42,7 @@
 
                                     <td class="px-4 py-4 text-sm text-gray-800 whitespace-nowrap">
                                         <div class="flex items-center gap-x-2">
-                                            <img class="object-cover w-12 h-12 rounded-full" src="{{ asset($doctor->image) }}" alt="">
+                                            <img class="object-cover w-12 h-12 rounded-full" src="{{ $doctor->image ? asset('storage/' . $doctor->image ) : 'https://via.placeholder.com/150' }}" alt="">
                                             <div>
                                                 <h2 class="text-sm font-medium text-gray-800">{{ $doctor->name }}</h2>
                                             </div>

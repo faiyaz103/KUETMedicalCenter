@@ -87,6 +87,21 @@ Route::get('/admin/dashboard', [ContactController::class, 'list'])->name('admin.
 Route::post('/admin/dashboard/update', [ContactController::class, 'storeOrUpdate'])->name('contact.storeorupdate');
 
 
+// _______________________Doctors_________________________
+// Show list
+Route::get('/admin/doctors', [DoctorController::class, 'list'])->name('doctors.list');
+// Route to show the form to create a new notice
+Route::get('/admin/doctors/create', [DoctorController::class, 'create'])->name('doctors.create');
+// Route to store the newly created one
+Route::post('/admin/doctors', [DoctorController::class, 'store'])->name('doctors.store');
+// Route to show the edit form for an existing one
+Route::get('/admin/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
+// Route to update the existing one
+Route::put('/admin/doctors/{id}', [DoctorController::class, 'update'])->name('doctors.update');
+// Route to delete one
+Route::delete('/admin/doctors/{id}', [DoctorController::class, 'destroy'])->name('doctors.destroy');
+
+
 // _______________________Notice_________________________
 // Show notice list
 Route::get('/admin/notices', [NoticeController::class, 'list'])->name('notices.list');
