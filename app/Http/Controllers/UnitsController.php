@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Units;
 use Illuminate\Http\Request;
 
 class UnitsController extends Controller
@@ -9,56 +10,70 @@ class UnitsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function list()
     {
         //
+        $units=Units::all();
+
+        return view('admin.units.index', compact('units'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         //
+
+        return view('admin.units.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+    
+        Units::create([
+            'name' => $request->name,
+        ]);
+
+        return redirect()->route('units.list')->with('success', 'uploaded successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
+        $unit = Units::findOrFail($id);
+        return view('admin.units.edit', compact('unit'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $unit = Units::findOrFail($id);
+
+        $unit->update([
+            'name' => $request->name,
+        ]);
+
+        return redirect()->route('units.list')->with('success', 'Updated successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         //
+        $unit = Units::findOrFail($id);
+
+        // Delete record from database
+        $unit->delete();
+
+        return redirect()->route('units.list')->with('success', 'Deleted successfully!');
     }
 }

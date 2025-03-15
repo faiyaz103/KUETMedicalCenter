@@ -10,6 +10,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\UnitsController;
 use App\Models\Contact;
 
 // ************************ USER ************************
@@ -105,7 +106,7 @@ Route::delete('/admin/doctors/{id}', [DoctorController::class, 'destroy'])->name
 // _______________________Staff_________________________
 // Show list
 Route::get('/admin/staff', [StaffController::class, 'list'])->name('staff.list');
-// Route to show the form to create a new notice
+// Route to show the form to create a new one
 Route::get('/admin/staff/create', [StaffController::class, 'create'])->name('staff.create');
 // Route to store the newly created one
 Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
@@ -115,6 +116,22 @@ Route::get('/admin/staff/{id}/edit', [StaffController::class, 'edit'])->name('st
 Route::put('/admin/staff/{id}', [StaffController::class, 'update'])->name('staff.update');
 // Route to delete one
 Route::delete('/admin/staff/{id}', [StaffController::class, 'destroy'])->name('staff.destroy');
+
+
+// _______________________Units_________________________
+// Show list
+Route::get('/admin/units', [UnitsController::class, 'list'])->name('units.list');
+// Route to show the form to create a new one
+Route::get('/admin/units/create', [UnitsController::class, 'create'])->name('units.create');
+// Route to store the newly created one
+Route::post('/admin/units', [UnitsController::class, 'store'])->name('units.store');
+// Route to show the edit form for an existing one
+Route::get('/admin/units/{id}/edit', [UnitsController::class, 'edit'])->name('units.edit');
+// Route to update the existing one
+Route::put('/admin/units/{id}', [UnitsController::class, 'update'])->name('units.update');
+// Route to delete one
+Route::delete('/admin/units/{id}', [UnitsController::class, 'destroy'])->name('units.destroy');
+
 
 
 // _______________________Notice_________________________

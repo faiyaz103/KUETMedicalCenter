@@ -44,19 +44,19 @@
 
                     <!-- Doctors Schedule -->
                     <x-admin-navlink href="/admin/doctors-schedule" :active="request()->is('admin/doctors-schedule')">
-                        <img src="{{ asset('images/admin/schedule.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
+                        <img src="{{ asset('images/admin/schedule.png') }}" alt="Doctors Schedule" class="h-5 w-5 mr-3 inline">
                         Doctors' Schedule
                     </x-admin-navlink>
 
                     <!-- Staff List -->
                     <x-admin-navlink href="/admin/staff" :active="request()->is('admin/staff*')">
-                        <img src="{{ asset('images/admin/staff.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
+                        <img src="{{ asset('images/admin/staff.png') }}" alt="Staff" class="h-5 w-5 mr-3 inline">
                         Staff
                     </x-admin-navlink>
 
                     <!-- Units -->
-                    <x-admin-navlink href="/admin/units" :active="request()->is('admin/units')">
-                        <img src="{{ asset('images/admin/units.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
+                    <x-admin-navlink href="/admin/units" :active="request()->is('admin/units*')">
+                        <img src="{{ asset('images/admin/units.png') }}" alt="Units" class="h-5 w-5 mr-3 inline">
                         Units
                     </x-admin-navlink>
 
