@@ -1,3 +1,22 @@
+## Key Features  
+
+### 📱 Responsive Design  
+- Optimized for all screen sizes, including mobile, tablet, and desktop.  
+- Ensures a seamless user experience across different devices.  
+
+### 🔐 [Multi-Role Authentication & Email Verification](#authentication-and-verification)
+- Secure authentication system with role-based access control.  
+- Email verification to ensure account authenticity.  
+- Supports multiple user roles (Admin & Student) with different permissions.  
+
+### 🔄 Role-Based Routing  
+- Restricts access to specific pages based on user roles.  
+- Ensures users can only access features relevant to their role.  
+
+### 🛠️ [Admin Panel for Efficient Management](#admin-panel)  
+- **Create, Edit, Delete** operations for managing content and data.  
+- Only authorized admins can perform critical operations.  
+
 ## Website Preview  
 #### Home Page
 <img src="imageassets/Home.jpeg" alt="home" width="700" height="900"/>
