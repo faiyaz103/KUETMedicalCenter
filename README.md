@@ -1,6 +1,21 @@
+# KUET Medical Center
+
+## Project Details
+This project was developed as part of the course ***System Development Project (CSE 3200)*** at ***Khulna University of Engineering and Technology***.
+
+- **Framework**: Laravel 11
+- **Frontend**: HTML, Tailwind CSS and JavaScript
+- **Backend**: PHP:Laravel
+- **Package Used**: ***Laravel Breeze*** for authentication
+- **Database**: MySQL
+- **Team**:
+  - [Ahanaf Tahmid Rifat](https://github.com/rifat9754)
+  - [Faiyaz Mahmud](https://github.com/faiyaz103)
+
+
 ## Key Features  
 
-### 📱 [Responsive Design](#respnosive-design)
+### 📱 [Responsive Design](#responsive-design)
 - Optimized for all screen sizes, including mobile, tablet, and desktop.  
 - Ensures a seamless user experience across different devices.  
 
