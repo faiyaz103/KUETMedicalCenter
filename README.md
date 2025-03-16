@@ -38,16 +38,13 @@
 ##### Contact
 <img src="imageassets/contact.jpeg" alt="Contact" width="700" height="400"/>
 
-### Respnosive Design
+### Responsive Design
 
 <div>
-<img src="imageassets/response1.jpeg" alt="response1" width="250" />
-<img src="imageassets/response2.jpeg" alt="response2" width="250" />
-</div>
-
-<div>
-<img src="imageassets/response3.jpeg" alt="response3" width="250" />
-<img src="imageassets/response4.jpeg" alt="response4" width="250" />
+<img src="imageassets/response1.jpeg" alt="response1" width="200" height="400" />
+<img src="imageassets/response2.jpeg" alt="response2" width="200" height="400" />
+<img src="imageassets/response3.jpeg" alt="response3" width="200" height="400" />
+<img src="imageassets/response4.jpeg" alt="response4" width="200" height="400" />
 </div>
 
 ### Authentication and Verification
