@@ -37,13 +37,13 @@
                     </x-admin-navlink>
 
                     <!-- Doctors List -->
-                    <x-admin-navlink href="/admin/doctors" :active="request()->is('admin/doctors*')">
+                    <x-admin-navlink href="/admin/doctors" :active="request()->is('admin/doctors') || request()->is('admin/doctors/create') || request()->is('admin/doctors/{id}/edit')">
                         <img src="{{ asset('images/admin/doctor.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Doctors
                     </x-admin-navlink>
 
                     <!-- Doctors Schedule -->
-                    <x-admin-navlink href="/admin/doctors-schedule" :active="request()->is('admin/doctors-schedule')">
+                    <x-admin-navlink href="/admin/doctors-schedule" :active="request()->is('admin/doctors-schedule*')">
                         <img src="{{ asset('images/admin/schedule.png') }}" alt="Doctors Schedule" class="h-5 w-5 mr-3 inline">
                         Doctors' Schedule
                     </x-admin-navlink>

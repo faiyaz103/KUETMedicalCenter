@@ -54,6 +54,7 @@ Route::get('/home', function () {
     return view('user.home');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 // -----------------Profile--------------------
 // Profile View and Delete without verification
 Route::middleware('auth')->group(function () {
@@ -92,7 +93,7 @@ Route::post('/admin/dashboard/update', [ContactController::class, 'storeOrUpdate
 // _______________________Doctors_________________________
 // Show list
 Route::get('/admin/doctors', [DoctorController::class, 'list'])->name('doctors.list');
-// Route to show the form to create a new notice
+// Route to show the form to create a new one
 Route::get('/admin/doctors/create', [DoctorController::class, 'create'])->name('doctors.create');
 // Route to store the newly created one
 Route::post('/admin/doctors', [DoctorController::class, 'store'])->name('doctors.store');
@@ -102,6 +103,15 @@ Route::get('/admin/doctors/{id}/edit', [DoctorController::class, 'edit'])->name(
 Route::put('/admin/doctors/{id}', [DoctorController::class, 'update'])->name('doctors.update');
 // Route to delete one
 Route::delete('/admin/doctors/{id}', [DoctorController::class, 'destroy'])->name('doctors.destroy');
+
+
+// _______________________Doctors Schedule_________________________
+// Show list
+Route::get('/admin/doctors-schedule', [DoctorScheduleController::class, 'list'])->name('schedule.list');
+// Route to show the form to create a new one
+Route::get('/admin/doctors-schedule/{id}/edit', [DoctorScheduleController::class, 'edit'])->name('schedule.edit');
+// Route to update the existing one
+Route::put('/admin/doctors-schedule/{id}', [DoctorScheduleController::class, 'update'])->name('schedule.update');
 
 
 // _______________________Staff_________________________
@@ -162,7 +172,6 @@ Route::get('/admin/services/{id}/edit', [ServiceController::class, 'edit'])->nam
 Route::put('/admin/services/{id}', [ServiceController::class, 'update'])->name('services.update');
 // Route to delete one
 Route::delete('/admin/services/{id}', [ServiceController::class, 'destroy'])->name('services.destroy');
-
 
 
 // _______________________Notice_________________________
