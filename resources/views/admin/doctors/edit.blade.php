@@ -15,6 +15,16 @@
         @error('image')
             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
         @enderror
+        @if ($doctor->image)
+            <div class="mt-2">
+                <img src="{{ asset('storage/' . $doctor->image) }}" alt="Doctor Image" class="w-32 h-32 object-cover rounded-lg">
+                <div class="mt-2">
+                    <input type="checkbox" name="remove_image" id="remove_image" value="1">
+                    <label for="remove_image" class="text-sm font-medium text-red-600">Remove Image</label>
+                </div>
+            </div>
+        @endif
+
         <div class="mb-5">
             <label for="name" class="block mb-2 text-sm font-medium text-teal-800 ">Name</label>
             <input type="text" name="name" value="{{ $doctor->name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-teal-800 focus:border-teal-800 block w-full p-2.5" required />

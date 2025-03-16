@@ -75,9 +75,17 @@ class StaffController extends Controller
             'designation' => 'required|string|max:255',
             'contact' => 'required|string|max:20',
             'email' => 'required|email|unique:staff,email,' . $id,
+            'remove_image' => 'nullable|boolean',
         ]);
 
         $staff = Staff::findOrFail($id);
+
+        if ($request->has('remove_image')) {
+            if ($staff->image) {
+                Storage::disk('public')->delete($staff->image);
+            }
+            $staff->image = null;
+        }
 
         if ($request->hasFile('image')) {
             if ($staff->image) {

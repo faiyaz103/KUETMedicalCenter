@@ -67,16 +67,35 @@
                     </x-admin-navlink>
 
                     <!-- Services -->
-                    <x-admin-navlink href="/admin/services" :active="request()->is('admin/services')">
+                    <x-admin-navlink href="/admin/services" :active="request()->is('admin/services*')">
                         <img src="{{ asset('images/admin/services.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Services
                     </x-admin-navlink>
 
                     <!-- Notices -->
-                    <x-admin-navlink href="{{ route('notices.list') }}" :active="request()->is('admin/notices') || request()->is('admin/notices*')">
+                    <x-admin-navlink href="{{ route('notices.list') }}" :active="request()->is('admin/notices*')">
                         <img src="{{ asset('images/admin/notices.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
                         Notices
                     </x-admin-navlink>
+
+                    <div class>
+                        <a href="{{ route('dashboard')}}" class="flex items-center px-2 py-2 text-sm font-medium bg-blue-600 text-white hover:bg-blue-200 hover:text-blue-600 group transition-all duration-200">
+                            <img src="{{ asset('images/admin/site.png') }}" alt="Site" class="h-5 w-5 mr-3 inline">
+                            Back to Site
+                        </a>
+                        <a href="{{ route('profile.edit')}}" class="flex items-center px-2 py-2 text-sm font-medium bg-orange-400 text-white hover:bg-orange-200 hover:text-orange-600 group transition-all duration-200">
+                            <img src="{{ asset('images/admin/adminprofile.png') }}" alt="Admin" class="h-5 w-5 mr-3 inline">
+                            Admin Profile
+                        </a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="w-full text-left px-2 py-2 text-sm font-medium bg-red-600 text-white hover:bg-red-200 hover:text-red-600">
+                                <img src="{{ asset('images/admin/logout.png') }}" alt="Admin" class="h-5 w-5 mr-3 inline">
+                                Sign out
+                            </button>
+                        </form>
+                    </div>
+                    
 
                 </div>
             </nav>

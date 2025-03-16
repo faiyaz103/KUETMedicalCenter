@@ -149,6 +149,21 @@ Route::put('/admin/tests/{id}', [TestsController::class, 'update'])->name('tests
 Route::delete('/admin/tests/{id}', [TestsController::class, 'destroy'])->name('tests.destroy');
 
 
+// _______________________Services_________________________
+// Show list
+Route::get('/admin/services', [ServiceController::class, 'list'])->name('services.list');
+// Route to show the form to create a new one
+Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('services.create');
+// Route to store the newly created one
+Route::post('/admin/services', [ServiceController::class, 'store'])->name('services.store');
+// Route to show the edit form for an existing one
+Route::get('/admin/services/{id}/edit', [ServiceController::class, 'edit'])->name('services.edit');
+// Route to update the existing one
+Route::put('/admin/services/{id}', [ServiceController::class, 'update'])->name('services.update');
+// Route to delete one
+Route::delete('/admin/services/{id}', [ServiceController::class, 'destroy'])->name('services.destroy');
+
+
 
 // _______________________Notice_________________________
 // Show notice list

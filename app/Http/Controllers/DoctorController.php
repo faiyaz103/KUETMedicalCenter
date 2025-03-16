@@ -78,9 +78,17 @@ class DoctorController extends Controller
             'specialization' => 'required|string|max:255',
             'contact' => 'required|string|max:20',
             'email' => 'required|email|unique:doctors,email,' . $id,
+            'remove_image' => 'nullable|boolean',
         ]);
 
         $doctor = Doctor::findOrFail($id);
+
+        if ($request->has('remove_image')) {
+            if ($doctor->image) {
+                Storage::disk('public')->delete($doctor->image);
+            }
+            $doctor->image = null;
+        }
 
         if ($request->hasFile('image')) {
             if ($doctor->image) {

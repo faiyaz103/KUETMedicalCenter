@@ -10,7 +10,7 @@
         <!-- Services -->
         @foreach ($services as $service)
         <div class="grid gap-6 bg-green-200 rounded-md border-2 border-solid border-teal-800 p-8 md:p-10">
-          <img src="{{$service->file_path ? asset('storage/' . $service->image) : 'https://via.placeholder.com/150' }}" alt="Service Image" class="inline-block mx-auto h-16 w-16 object-cover rounded-full " />
+          <img src="{{$service->file_path ? asset('storage/' . $service->file_path) : 'https://via.placeholder.com/150' }}" alt="Service Image" class="inline-block mx-auto h-30 w-60 object-cover rounded-md" />
           <h3 class="text-xl mx-auto text-teal-800 font-semibold">{{$service->name}}</h3>
           <p class="text-sm mx-auto text-gray-800">
             {{$service->description}}
