@@ -1,6 +1,6 @@
 ## Key Features  
 
-### 📱 Responsive Design  
+### 📱 [Responsive Design](#respnosive-design)
 - Optimized for all screen sizes, including mobile, tablet, and desktop.  
 - Ensures a seamless user experience across different devices.  
 
@@ -38,6 +38,18 @@
 ##### Contact
 <img src="imageassets/contact.jpeg" alt="Contact" width="700" height="400"/>
 
+### Respnosive Design
+
+<div>
+<img src="imageassets/response1.jpeg" alt="response1" width="250" />
+<img src="imageassets/response2.jpeg" alt="response2" width="250" />
+</div>
+
+<div>
+<img src="imageassets/response3.jpeg" alt="response3" width="250" />
+<img src="imageassets/response4.jpeg" alt="response4" width="250" />
+</div>
+
 ### Authentication and Verification
 
 #### User Registration 
@@ -48,6 +60,9 @@
 
 #### Email Verification
 <img src="imageassets/verification.jpeg" alt="Verification" width="700" height="400"/>
+
+#### Password Recovery
+<img src="imageassets/forgotpass.jpeg" alt="forgotpass" width="700" height="400"/>
 
 ### Admin Panel
 
