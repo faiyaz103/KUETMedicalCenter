@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>Admin Dashboard</title>
-    @vite(['resources/css/app.css'])
+    {{-- @vite(['resources/css/app.css']) --}}
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
