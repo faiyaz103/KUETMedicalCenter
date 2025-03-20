@@ -32,7 +32,7 @@
                                 <a href="/services" class="block px-4 py-2 text-sm text-teal-800 hover:bg-gray-200">Other Services</a>
                             </div>
                         </div>
-                        <x-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-navlink>
+                        <x-navlink href="/blood-bank" :active="request()->is('blood-bank*')">Blood Bank</x-navlink>
                         <x-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-navlink>
                         <x-navlink href="/contact" :active="request()->is('contact')">Contact Us</x-navlink>
                     </div>
@@ -97,7 +97,7 @@
                     <a href="/services" class="block rounded-md px-3 py-2 text-base bg-gray-300 font-medium text-teal-800 hover:bg-gray-100" :active="request()->is('staff')">Other Services</a>
                 </div>
             </div>   
-            <x-mobile-navlink href="/bloodbank" :active="request()->is('bloodbank')">Blood Bank</x-mobile-navlink>
+            <x-mobile-navlink href="/blood-bank" :active="request()->is('blood-bank*')">Blood Bank</x-mobile-navlink>
             <x-mobile-navlink href="/notices" :active="request()->is('notices')">Notice Board</x-mobile-navlink>
             <x-mobile-navlink href="/contact" :active="request()->is('contact')">Contact Us</x-mobile-navlink>
         </div>

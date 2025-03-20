@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BloodBankController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DoctorController;
@@ -71,8 +72,23 @@ Route::patch('/profile', [ProfileController::class, 'update'])->middleware(['aut
 
 // $$$$$$$$$$$$$$$$$$$$$$ STUDENT $$$$$$$$$$$$$$$$$$$$$$$$$
 
+Route::middleware(['auth', 'verified', 'student'])->group( function(){
+
 // ------------------Feedback-------------------
-Route::post('/feedback', [FeedbackController::class, 'store'])->middleware(['auth', 'verified', 'student'])->name('feedback.store');
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.store');
+
+
+// -------------------Blood Bank------------------
+// List
+Route::get('/blood-bank', [BloodBankController::class, 'index'])->name('donor.index');
+// Register/Update View
+Route::get('/blood-bank/donor/edit', [BloodBankController::class, 'edit'])->name('donor.edit');
+// Register/Update
+Route::put('/blood-bank/donor/update', [BloodBankController::class, 'update'])->name('donor.update');
+// Delete Donor
+Route::delete('/blood-bank/donor/delete', [BloodBankController::class, 'destroy'])->name('donor.destroy');
+
+});
 
 // $$$$$$$$$$$$$$$$$$$$$$ STUDENT $$$$$$$$$$$$$$$$$$$$$$$$$
 
