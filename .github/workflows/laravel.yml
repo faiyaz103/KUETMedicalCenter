@@ -80,4 +80,4 @@ jobs:
         DB_DATABASE: kuetmedicalcenter
         DB_USERNAME: root
         DB_PASSWORD: root
-      run: php artisan test --verbose
+      run: php artisan test
