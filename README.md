@@ -30,7 +30,12 @@ This project was developed as part of the course ***System Development Project (
 
 ### 🛠️ [Admin Panel for Efficient Management](#admin-panel)  
 - **Create, Edit, Delete** operations for managing content and data.  
-- Only authorized admins can perform critical operations.  
+- Only authorized admins can perform critical operations.
+
+## Database
+
+### Entity Relationship Diagram
+<img src="imageassets/dbdiagram.png" alt="home" width="700" height="400"/>
 
 ## Website Preview  
 #### Home Page
