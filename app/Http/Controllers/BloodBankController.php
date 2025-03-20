@@ -10,40 +10,14 @@ use Illuminate\Http\Request;
 
 class BloodBankController extends Controller
 {   
-    public function index()
+    public function index($bloodtype)
     {   
         $donors = User::with('bloodType')->get();
-        return view('student.bloodbank', compact('donors'));
+        return view('student.donor.index', compact('donors', 'bloodtype'));
     }
 
-    // public function create()
-    // {
-    //     return view('student.donor.create');
-    // }
-
-    // // Store donor information
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'type' => 'required|string',
-    //         'phone' => 'required|string|max:15',
-    //     ]);
-
-
-    //     BloodBank::create([
-    //         'user_id' => Auth::id(),
-    //         'type' => $request->type,
-    //         'phone' => $request->phone,
-    //     ]);
-
-    //     return redirect()->route('donor.index')->with('success', 'You are now a donor.');
-    // }
-
-    // Show edit form for authenticated donor
     public function edit()
     {
-        // $donor = BloodBank::where('user_id', Auth::id())->firstOrFail();
-        // return view('student.donor.edit', compact('donor'));
 
         $donor = User::with('bloodType')->findOrFail(Auth::id());
 
@@ -71,7 +45,7 @@ class BloodBankController extends Controller
             $validated // Data to update or create
         );
 
-        return redirect()->route('donor.index')->with('success', 'Information updated.');
+        return redirect()->route('bloodbank.home')->with('success', 'Information updated.');
     }
 
     // Delete donor record
@@ -80,6 +54,6 @@ class BloodBankController extends Controller
         $donor = BloodBank::where('user_id', Auth::id())->firstOrFail();
         $donor->delete();
 
-        return redirect()->route('donor.index')->with('success', 'Donor information removed.');
+        return redirect()->route('bloodbank.home')->with('success', 'Donor information removed.');
     }
 }

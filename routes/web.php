@@ -79,8 +79,12 @@ Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback.s
 
 
 // -------------------Blood Bank------------------
+// Home
+Route::get('/blood-bank', function () {
+    return view('student.bloodbank');
+})->name('bloodbank.home');
 // List
-Route::get('/blood-bank', [BloodBankController::class, 'index'])->name('donor.index');
+Route::get('/blood-bank/donors/{bloodtype}', [BloodBankController::class, 'index'])->name('donor.index');
 // Register/Update View
 Route::get('/blood-bank/donor/edit', [BloodBankController::class, 'edit'])->name('donor.edit');
 // Register/Update
