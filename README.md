@@ -55,7 +55,7 @@ This project was developed as part of the course ***System Development Project (
 #### Notice Board
 <img src="imageassets/notice.png" alt="Notice" width="700" height="400"/>
 
-##### Contact
+#### Contact
 <img src="imageassets/contact.jpeg" alt="Contact" width="700" height="400"/>
 
 ### Responsive Design
