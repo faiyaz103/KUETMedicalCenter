@@ -72,6 +72,7 @@ This project was developed as part of the course ***System Development Project (
 
 #### Email Verification
 <img src="imageassets/verification.jpeg" alt="Verification" width="700" height="400"/>
+##### Gmail SMTP
 <img src="imageassets/verifyemail.png" alt="Verify" width="700" height="400"/>
 
 #### Password Recovery
