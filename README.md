@@ -24,7 +24,7 @@ This project was developed as part of the course ***System Development Project (
 - Email verification to ensure account authenticity.  
 - Supports multiple user roles (Admin & Student) with different permissions.  
 
-### 🔄 Role-Based Routing  
+### 🔄 [Role-Based Routing](#role-based-access)
 - Restricts access to specific pages based on user roles.  
 - Ensures users can only access features relevant to their role.  
 
@@ -35,7 +35,7 @@ This project was developed as part of the course ***System Development Project (
 ## Database
 
 ### Entity Relationship Diagram
-<img src="imageassets/dbdiagram.png" alt="home" width="700" height="400"/>
+<img src="imageassets/dbdiagram.png" alt="dbdiagram" width="700" height="400"/>
 
 ## Website Preview  
 #### Home Page
@@ -83,6 +83,17 @@ This project was developed as part of the course ***System Development Project (
 
 #### Password Recovery
 <img src="imageassets/forgotpass.jpeg" alt="forgotpass" width="700" height="400"/>
+
+### Role-Based Access
+
+#### Blood Bank page is only accessible by authenticated and verified students 
+<img src="imageassets/bloodbank.jpeg" alt="bloodbank" width="700" height="400"/>
+
+#### Authenticated and verified students can access the list of available blood donors
+<img src="imageassets/donor.jpeg" alt="donor" width="700" height="400"/>
+
+#### An authenticated and verified student can register as a blood donor
+<img src="imageassets/bloodedit.jpeg" alt="bloodedit" width="700" height="400"/>
 
 ### Admin Panel
 
