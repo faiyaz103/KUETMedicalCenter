@@ -11,14 +11,22 @@
                     <a href="/" class="hover:underline me-4 md:me-6">Home</a>
                 </li>
                 <li>
-                    <a href="/notices" class="hover:underline me-4 md:me-6">Notice Board</a>
+                    <a href="/facilities" class="hover:underline me-4 md:me-6">Facilities</a>
                 </li>
                 <li>
-                    <a href="/contact" class="hover:underline">Contact</a>
+                    <a href="/doctors-schedule" class="hover:underline me-4 md:me-6">Visit Doctor</a>
+                </li>
+                <li>
+                    <a href="/services" class="hover:underline me-4 md:me-6">Services</a>
+                </li>
+                <li>
+                    <a href="/notices" class="hover:underline">Notice Board</a>
                 </li>
             </ul>
         </div>
         <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-        <span class="block text-sm sm:text-center text-white">© 2024 <a href="https://github.com/faiyaz103/KUETMedicalCenter" target="_blank" class="hover:underline">System Development Project (CSE 3200)</a></span>
+        <span class="block text-sm sm:text-center text-white">© 2024 <a href="https://github.com/faiyaz103/KUETMedicalCenter" target="_blank" class="hover:underline">
+            System Development Project (CSE 3200) | MIT LICENSE.
+        </a></span>
     </div>
 </footer>
