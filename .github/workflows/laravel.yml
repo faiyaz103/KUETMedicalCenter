@@ -42,8 +42,6 @@ jobs:
         echo "DB_DATABASE=kuetmedicalcenter" >> .env
         echo "DB_USERNAME=root" >> .env
         echo "DB_PASSWORD=root" >> .env
-        echo "SESSION_DRIVER=file" >> .env
-        echo "MAIL_MAILER=log" >> .env
 
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
@@ -58,8 +56,8 @@ jobs:
           sleep 2
         done
 
-    - name: Run Migrations with Seeding
-      run: php artisan migrate --seed --force
+    - name: Run Migrations
+      run: php artisan migrate --force
 
     - name: Clear Config and Cache
       run: |
