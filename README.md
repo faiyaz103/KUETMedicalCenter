@@ -6,11 +6,16 @@ This project was developed as part of the course ***System Development Project (
 - **Framework**: Laravel 11
 - **Frontend**: HTML, Tailwind CSS and JavaScript
 - **Backend**: PHP:Laravel
-- **Package Used**: ***Laravel Breeze*** for authentication
 - **Database**: MySQL
+- **Package Used**: ***Laravel Breeze*** for authentication
+- **Testing Framework**: PHPUnit
+- **Testings**:
+    - ***CI*** using GitHub Actions
+    - ***Feature Test*** using PHPUnit
+
 - **Team**:
-  - [Ahanaf Tahmid Rifat](https://github.com/rifat9754)
-  - [Faiyaz Mahmud](https://github.com/faiyaz103)
+    - [Ahanaf Tahmid Rifat](https://github.com/rifat9754)
+    - [Faiyaz Mahmud](https://github.com/faiyaz103)
 
 
 ## Key Features  
