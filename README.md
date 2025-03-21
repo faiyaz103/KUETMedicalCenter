@@ -9,7 +9,7 @@ This project was developed as part of the course ***System Development Project (
 - **Database**: MySQL
 - **Package Used**: ***Laravel Breeze*** for authentication
 - **Testing Framework**: PHPUnit
-- **Testings**:
+- **Testing**:
     - ***CI*** using GitHub Actions
     - ***Feature Test*** using PHPUnit
 
