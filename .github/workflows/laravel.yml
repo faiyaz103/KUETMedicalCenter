@@ -71,3 +71,13 @@ jobs:
         php artisan storage:link
         php artisan config:cache
         php artisan route:cache
+
+    - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
+      env:
+        DB_CONNECTION: mysql
+        DB_HOST: 127.0.0.1
+        DB_PORT: 3306
+        DB_DATABASE: kuetmedicalcenter
+        DB_USERNAME: root
+        DB_PASSWORD: root
+      run: php artisan test
