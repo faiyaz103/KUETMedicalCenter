@@ -89,6 +89,9 @@ This project was developed as part of the course ***System Development Project (
 #### Password Recovery
 <img src="imageassets/forgotpass.jpeg" alt="forgotpass" width="700" height="400"/>
 
+#### Profile Information
+<img src="imageassets/profile.jpeg" alt="profile" width="700" height="700"/>
+
 ### Role-Based Access
 
 #### Blood Bank page is only accessible by authenticated and verified students 
