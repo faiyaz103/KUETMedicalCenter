@@ -30,7 +30,8 @@ class UserFactory extends Factory
             'user@stud.kuet.ac.bd',
             'test@kuet.ac.bd',
             'example@stud.kuet.ac.bd'
-        ]),
+        ]), 
+            'role' => 'student',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
