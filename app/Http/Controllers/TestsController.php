@@ -12,7 +12,7 @@ class TestsController extends Controller
         //
         $tests=Tests::all();
 
-        return view('admin.tests.index', compact('tests'));
+        return view('admin.medtests.index', compact('tests'));
     }
 
 
@@ -20,7 +20,7 @@ class TestsController extends Controller
     {
         //
 
-        return view('admin.tests.create');
+        return view('admin.medtests.create');
     }
 
 
@@ -45,7 +45,7 @@ class TestsController extends Controller
     {
         //
         $test = Tests::findOrFail($id);
-        return view('admin.tests.edit', compact('test'));
+        return view('admin.medtests.edit', compact('test'));
     }
 
 
