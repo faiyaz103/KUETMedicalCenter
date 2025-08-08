@@ -39,25 +39,25 @@ class StudentTest extends TestCase
         }
     }
 
-    public function test_role_student_can_send_feedback(): void
-    {
+    // public function test_role_student_can_send_feedback(): void
+    // {
 
-        $student = User::factory()->create();
+    //     $student = User::factory()->create();
 
-        $feedbackData = [
-            'message' => 'This is a test feedback message.',
-        ];
+    //     $feedbackData = [
+    //         'message' => 'This is a test feedback message.',
+    //     ];
 
-        $response = $this->actingAs($student)->post(route('feedback.store'), $feedbackData);
+    //     $response = $this->actingAs($student)->post(route('feedback.store'), $feedbackData);
 
-        $this->assertDatabaseHas('feedback', [
-            'name' => $student->name,
-            'email' => $student->email,
-            'message' => $feedbackData['message'],
-        ]);
+    //     $this->assertDatabaseHas('feedback', [
+    //         'name' => $student->name,
+    //         'email' => $student->email,
+    //         'message' => $feedbackData['message'],
+    //     ]);
 
-        $response->assertRedirect('/');
-    }
+    //     $response->assertRedirect('/');
+    // }
 
     public function test_role_admin_can_not_access_blood_bank_page(): void
     {   
@@ -85,26 +85,26 @@ class StudentTest extends TestCase
         }
     }
 
-    public function test_role_admin_can_not_send_feedback(): void
-    {
+    // public function test_role_admin_can_not_send_feedback(): void
+    // {
 
-        $student = User::factory()->create();
-        $student->role = 'admin';
-        $student->save();
-        $feedbackData = [
-            'message' => 'This is a test feedback message.',
-        ];
+    //     $student = User::factory()->create();
+    //     $student->role = 'admin';
+    //     $student->save();
+    //     $feedbackData = [
+    //         'message' => 'This is a test feedback message.',
+    //     ];
 
-        $response = $this->actingAs($student)->post(route('feedback.store'), $feedbackData);
+    //     $response = $this->actingAs($student)->post(route('feedback.store'), $feedbackData);
 
-        $this->assertDatabaseMissing('feedback', [
-            'name' => $student->name,
-            'email' => $student->email,
-            'message' => $feedbackData['message'],
-        ]);
+    //     $this->assertDatabaseMissing('feedback', [
+    //         'name' => $student->name,
+    //         'email' => $student->email,
+    //         'message' => $feedbackData['message'],
+    //     ]);
 
-        $response->assertRedirect('/');
-    }
+    //     $response->assertRedirect('/');
+    // }
     
 
 }

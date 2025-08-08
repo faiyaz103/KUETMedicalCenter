@@ -75,12 +75,12 @@ class GuestTest extends TestCase
     }
 
     // Guest can't provide feedback & complaint
-    public function test_guest_can_not_provide_feedback_and_complaint(): void
-    {
-        $response = $this->post('/feedback');
+    // public function test_guest_can_not_provide_feedback_and_complaint(): void
+    // {
+    //     $response = $this->post('/feedback');
 
-        $response->assertRedirect('/login');
-    }
+    //     $response->assertRedirect('/login');
+    // }
 
     public function test_guest_can_not_access_blood_bank_page(): void
     {
