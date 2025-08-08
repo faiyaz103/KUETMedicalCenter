@@ -6,13 +6,17 @@
         <div class="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <h1 class="text-2xl font-bold text-red-500 sm:text-3xl">
+              
                 @if(auth()->check() && auth()->user()->bloodType)
+                <h1 class="text-2xl font-bold text-teal-700 sm:text-3xl">
                     You are a registered blood donor.
-                @else 
-                    Become a blood donor.
+                </h1>
+                @else
+                <h1 class="text-2xl font-bold text-red-500 sm:text-3xl"> 
+                    Become a blood donor.     
+                </h1>
                 @endif
-            </h1>
+            
       
             </div>
       

@@ -15,6 +15,13 @@ class FeedbackController extends Controller
     {
         //
     }
+    public function list()
+    {
+        //
+        $feedbacks = Feedback::orderBy('id', 'asc')->get();
+
+        return view('admin.feedback.index', compact('feedbacks'));
+    }
 
     /**
      * Show the form for creating a new resource.

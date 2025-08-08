@@ -78,6 +78,12 @@
                         Notices
                     </x-admin-navlink>
 
+                    <!-- Notices -->
+                    <x-admin-navlink href="{{ route('feedback.list') }}" :active="request()->is('admin/feedback*')">
+                        <img src="{{ asset('images/admin/feedback.png') }}" alt="Doctors" class="h-5 w-5 mr-3 inline">
+                        Feedback
+                    </x-admin-navlink>
+
                     <div class>
                         <a href="{{ route('dashboard')}}" class="flex items-center px-2 py-2 text-sm font-medium bg-blue-600 text-white hover:bg-blue-200 hover:text-blue-600 group transition-all duration-200">
                             <img src="{{ asset('images/admin/site.png') }}" alt="Site" class="h-5 w-5 mr-3 inline">

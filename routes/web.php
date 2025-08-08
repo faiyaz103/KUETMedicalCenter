@@ -211,6 +211,11 @@ Route::delete('/admin/notices/{id}', [NoticeController::class, 'destroy'])->name
 Route::get('/admin/notices/{id}', [NoticeController::class, 'show'])->name('notices.show');
 
 
+// _______________________Feedback_________________________
+// Show feedback list
+Route::get('/admin/feedback', [FeedbackController::class, 'list'])->name('feedback.list');
+
+
 });
 
 // @@@@@@@@@@@@@@@@@@@@@@@ ADMIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@
